@@ -243,35 +243,6 @@ img {
   }
 }
 
-/* Mobile sticky call bar */
-.mobile-call-bar {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-call-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 90;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    color: var(--color-white);
-    padding: 0.9rem 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.15);
-  }
-
-  .footer {
-    padding-bottom: 3.5rem;
-  }
-}
 
 @media (max-width: 400px) {
   .container {
