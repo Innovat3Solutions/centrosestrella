@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/images/logos/Estrella_Favicon.png" />
+    <title>Estrella Medical Centers - Miami-Dade & Broward</title>
+    <meta name="description" content="Schedule your appointment at any of our medical centers in Miami-Dade and Broward counties." />
+    <script type="module" crossorigin src="/assets/index-BTYnBO8e.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CydfnyKq.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+

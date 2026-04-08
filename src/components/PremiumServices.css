@@ -1,0 +1,215 @@
+/* ========================================
+   PREMIUM SERVICES — Large Image Cards
+   ======================================== */
+
+.premium-section {
+  background: var(--color-bg-slate);
+}
+
+/* ---- Grid ---- */
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* ---- Card ---- */
+
+.premium-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 380px;
+}
+
+.premium-card-image {
+  position: absolute;
+  inset: 0;
+}
+
+.premium-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.premium-card:hover .premium-card-image img {
+  transform: scale(1.05);
+}
+
+.premium-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 28, 52, 0.88) 0%,
+    rgba(10, 28, 52, 0.45) 45%,
+    rgba(10, 28, 52, 0.08) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.premium-card:hover .premium-card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 28, 52, 0.92) 0%,
+    rgba(10, 28, 52, 0.5) 50%,
+    rgba(10, 28, 52, 0.12) 100%
+  );
+}
+
+/* Content */
+.premium-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.75rem;
+  color: var(--color-white);
+}
+
+.premium-card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  margin-bottom: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.premium-card:hover .premium-card-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.premium-card-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+
+.premium-card-content p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.55;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 1024px) {
+  .premium-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .premium-card {
+    height: 340px;
+  }
+}
+
+/* ---- Carousel Nav (mobile only) ---- */
+.premium-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .premium-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .premium-card {
+    min-width: calc(100vw - 3rem);
+    max-width: calc(100vw - 3rem);
+    flex-shrink: 0;
+    height: 300px;
+    scroll-snap-align: center;
+  }
+
+  .premium-card-content {
+    padding: 1.25rem;
+  }
+
+  .premium-card-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .premium-card-content p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .premium-card-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.6rem;
+  }
+
+  .premium-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .premium-nav-btn {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 1.5px solid var(--color-border);
+    color: var(--color-text-main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .premium-nav-btn:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .premium-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .premium-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .premium-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-border);
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.25s ease;
+  }
+
+  .premium-dot--active {
+    background: var(--color-primary);
+    width: 20px;
+    border-radius: 4px;
+  }
+}
