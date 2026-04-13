@@ -2,25 +2,19 @@ import { useLanguage } from '../i18n';
 import './Insurance.css';
 
 const row1 = [
-  { name: 'Humana', src: '/images/insurance/humana.png' },
-  { name: 'Simply', src: '/images/insurance/simply.png' },
   { name: 'Aetna', src: '/images/insurance/aetna.png' },
-  { name: 'Blue Cross Blue Shield', src: '/images/insurance/blue-cross-blue-shield-health-insurance-logo.webp' },
-  { name: 'Cigna', src: '/images/insurance/Cigna.png' },
-  { name: 'Devoted Health', src: '/images/insurance/DevotedHealth.png' },
-  { name: 'Bright Health', src: '/images/insurance/bright-health.webp' },
-  { name: 'Medica', src: '/images/insurance/Medica.webp' },
+  { name: 'Florida Blue', src: '/images/insurance/39.png' },
+  { name: 'CarePlus', src: '/images/insurance/CarePlus-Health-Plans-Logo-1.png' },
+  { name: 'Molina Healthcare', src: '/images/insurance/molina.webp' },
+  { name: 'Oscar Health', src: '/images/insurance/41.png' },
 ];
 
 const row2 = [
-  { name: 'CarePlus', src: '/images/insurance/CarePlus-Health-Plans-Logo-1.png' },
-  { name: 'United Healthcare', src: '/images/insurance/united-healthcare-logo.png' },
-  { name: 'WellCare', src: '/images/insurance/wellcare.png' },
-  { name: 'Molina Healthcare', src: '/images/insurance/molina.webp' },
-  { name: 'AvMed', src: '/images/insurance/avmed.png' },
-  { name: 'Preferred Care', src: '/images/insurance/preferred-care.png' },
-  { name: 'Oscar Health', src: '/images/insurance/Oscar_Health_logo.svg' },
-  { name: 'Freedom Health', src: '/images/insurance/freedom.gif' },
+  { name: 'Simply', src: '/images/insurance/simply.png' },
+  { name: 'Gold Kidney Health Plan', src: '/images/insurance/36.png' },
+  { name: 'Florida Community Care', src: '/images/insurance/37.png' },
+  { name: 'AmeriHealth Caritas', src: '/images/insurance/38.png' },
+  { name: 'Ambetter', src: '/images/insurance/40.png' },
 ];
 
 const LogoCard = ({ name, src }) => (
